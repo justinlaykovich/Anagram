@@ -5,16 +5,6 @@ using std::string;
 using std::cout;
 using std::endl;
 
-void anagram(const string&);
-void ana(const string&, const string&);
-
-void anagram(const string& word) {
-   size_t length = word.length();
-
-   for(int i = 0; i < length; i++)
-      ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
-}
-
 void ana(const string& suffix, const string& word) {
    size_t length = word.length();
 
@@ -30,6 +20,12 @@ void ana(const string& suffix, const string& word) {
       ana(suffix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
 }
 
+void anagram(const string& word) {
+   size_t length = word.length();
+
+   for(int i = 0; i < length; i++)
+      ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
+}
 
 int main()
 {
