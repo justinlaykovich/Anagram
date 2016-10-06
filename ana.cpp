@@ -27,6 +27,4 @@ void anagram(const string& word) {
 int main()
 {
    anagram("justin");
-   anagram("a");
-   anagram("");
 }
