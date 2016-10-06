@@ -16,7 +16,7 @@ void ana(const string& suffix, const string& word) {
    }
 
    for(int i = 0; i < length; i++)
-      ana(suffix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
+      ana(suffix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, (length - i) - 1));
 }
 
 /* Wrapper function. */
@@ -29,7 +29,7 @@ void anagram(const string& word) {
    }
 
    for(int i = 0; i < length; i++)
-      ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
+      ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, (length - i) - 1));
 }
 
 int main()
