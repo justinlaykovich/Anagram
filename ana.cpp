@@ -23,6 +23,11 @@ void ana(const string& suffix, const string& word) {
 void anagram(const string& word) {
    size_t length = word.length();
 
+   if(length <= 1) {
+      cout << word << endl;
+      return;
+   }
+
    for(int i = 0; i < length; i++)
       ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
 }
@@ -30,4 +35,6 @@ void anagram(const string& word) {
 int main()
 {
    anagram("justin");
+   anagram("a");
+   anagram("");
 }
