@@ -32,5 +32,5 @@ void ana(std::string suffix, std::string word) {
 
 int main()
 {
-   anagram("recursion");
+   anagram("justin");
 }
