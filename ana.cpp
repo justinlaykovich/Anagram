@@ -5,19 +5,20 @@ using std::string;
 using std::cout;
 using std::endl;
 
-void ana(std::string,std::string);
-void anagram(std::string);
+void anagram(const string&);
+void ana(const string&, const string&);
 
-void anagram(std::string word) {
+void anagram(const string& word) {
    size_t length = word.length();
-   for(int i = 0; i < length; i++)
-      ana(word.substr(i,1),word.substr(0,i)+word.substr(i+1,length-1));
 
+   for(int i = 0; i < length; i++)
+      ana(word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
 }
 
-void ana(std::string suffix, std::string word) {
+void ana(const string& suffix, const string& word) {
    size_t length = word.length();
 
+   // Base cases.
    if(length <= 2) {
       cout << suffix << word << endl;
       if(length == 2)
@@ -26,7 +27,7 @@ void ana(std::string suffix, std::string word) {
    }
 
    for(int i = 0; i < length; i++)
-      ana(suffix + word.substr(i,1),word.substr(0,i)+word.substr(i+1,length-1));
+      ana(suffix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, length - 1));
 }
 
 
