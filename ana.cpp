@@ -9,13 +9,9 @@ using std::endl;
 void ana(const string& suffix, const string& word) {
    size_t length = word.length();
 
-   /* Base cases:
-      The word is two characters, 1 character, or 0 characters.
-      */
-   if(length <= 2) {
+   // An anagram of a one character word is itself.
+   if(length <= 1) {
       cout << suffix << word << endl;
-      if(length == 2)
-         cout << suffix << word[1] << word[0] << endl;
       return;
    }
 
