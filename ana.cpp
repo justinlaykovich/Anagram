@@ -16,15 +16,14 @@ void ana(const string& prefix, const string& word) {
    }
 
    for(int i = 0; i < length; i++)
-      ana(prefix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1, (length - i) - 1));
+      ana(prefix + word.substr(i, 1), word.substr(0, i) + word.substr(i + 1));
 }
 
 /* Wrapper function. */
 void anagram(const string& word) {
-   ana("",word);
+   ana("", word);
 }
 
-int main()
-{
+int main() {
    anagram("justin");
 }
