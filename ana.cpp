@@ -5,7 +5,6 @@
 using std::string;
 using std::cout;
 using std::endl;
-using std::ostringstream;
 
 /* Main function */
 void ana(const string& prefix, const string& word) {
