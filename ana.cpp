@@ -20,9 +20,7 @@ void ana(const string& prefix, const string& word) {
 }
 
 /* Wrapper function. */
-void anagram(const string& word) {
-   ana("", word);
-}
+inline void anagram(string word) { ana("", word); };
 
 int main() {
    anagram("justin");
